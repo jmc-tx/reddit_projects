@@ -1,6 +1,20 @@
-#changes user input to pig latin and return a string
+#!/usr/bin/python
+# python 3.7
+# -*- coding: utf-8 -*-
+# ==============================================================================
+#
+#         FILE: pigLatin.py
+#
+#        USAGE: ./pigLatin.py
+#
+#  DESCRIPTION: # Changes user input to pig latin and return a string
+#
+#       AUTHOR: Justen Crockett
+#      VERSION: 1.0
+#      CREATED: 12/05/2018
+# ==============================================================================
 
-#TODO: validate input, allow for punctuation, convert script into functions
+# TODO: validate input, allow for punctuation, convert script into functions
 
 userInput = input("Enter a string to convert to pig latin: ")
 
