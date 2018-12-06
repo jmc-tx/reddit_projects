@@ -14,28 +14,34 @@
 #      CREATED: 12/05/2018
 # ==============================================================================
 
-# TODO: validate input, allow for punctuation, convert script into functions
+
+def pig_latin(uInput):
+
+    list1 = uInput.split()
+    i = 0
+    c = len(list1)
+    pTempList = list()
+
+    for i in range(c):
+        tempList = list(list1[i])
+        tempList.append(tempList[0])
+        tempList.remove(tempList[0])
+        tempList.append("-ay")
+        pList = tempList.copy()
+        str1 = ''.join(pList)
+
+        while i in range(c):
+            pTempList.append(str1)
+            break
+        i = i + 1
+
+    pString = ' '.join(pTempList)
+
+    return pString
+
 
 userInput = input("Enter a string to convert to pig latin: ")
 
-list1 = userInput.split()
-i = 0
-c = len(list1)
-pTempList = list()
 
-for i in range(c):
-    tempList = list(list1[i])
-    tempList.append(tempList[0])
-    tempList.remove(tempList[0])
-    tempList.append("-ay")
-    pList = tempList.copy()
-    str1 = ''.join(pList)
 
-    while i in range(c):
-        pTempList.append(str1)
-        break
-    i = i + 1
-
-pString = ' '.join(pTempList)
-
-print("Pig latin version:\n" + pString)
+print("Pig latin version:\n" + pig_latin(userInput))
